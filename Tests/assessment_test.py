@@ -15,4 +15,4 @@ def test_example2():
 def test_example3():
     assert example.example3([1,2,'a','b']) == [1,2]
     assert example.example3([1,'a','b',0,15]) == [1,0,15]
-    assert example.example3([[1,2,'aasf','1','123',123]]) == [1,2,123]
+    assert example.example3([1,2,'aasf','1','123',123]) == [1,2,123]

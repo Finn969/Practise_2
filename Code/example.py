@@ -1,4 +1,5 @@
-#!/usr/bin/env python3	
+# -*- coding: utf-8 -*-	
+#!/usr/bin/env python3
 
 	# <QUESTION 1>
 
@@ -13,8 +14,21 @@
 
 	# <HINT>
     
-def example1(input):
-	return n
+def example1(numbers):
+	nstring = ''.join(numbers)
+	nlist = nstring.split()
+	nlist = list(map(int, nlist))
+	odds = []
+	evens = []
+	for i in nlist:
+		if i % 2 == 0:
+			evens.append(i)
+		else:
+			odds.append(i)
+	if len(odds) == 1:
+		return nlist.index(odds[0])+1
+	else:
+		return nlist.index(evens[0])+1
 
 # <QUESTION 2>
 
@@ -23,7 +37,8 @@ def example1(input):
 # String will never be empty and you do not need to account for different data types.
 
 def example2(s):
-	return l
+	t = sorted(s.split(), key=len)
+	return len(t[0])
 
 # <QUESTION 3>
 
@@ -34,4 +49,4 @@ def example2(s):
 # filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 
 def example3(l):
-	return nl
+	return filter(lambda i:not(type(i) is str), l)
